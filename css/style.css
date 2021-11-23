@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  height: 100px;
+}
+
+header .text-center {
+  height: 100%;
+}
+
+main {
+  margin-top: 75px;
+  padding: 50px 0;
+  background-color: rgb(133, 133, 133);
+}
+
+.container div {
+  margin: 10px 0;
+  width: calc(100% / 5 - 10px);
+}
+
+.container .text-uppercase {
+  width: 100%;
+}
+
+i {
+  width: 100%;
+}
+
+.color-blue {
+  color: blue;
+}
+
+.color-green {
+  color: green;
+}
+
+.color-orange {
+  color: orange;
+}
