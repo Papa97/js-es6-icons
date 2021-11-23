@@ -115,16 +115,10 @@ const divs = [
 ];
 const container = document.querySelector('.container');
 
-for (let i = 0; i < divs.length; i++) {
-	container.innerHTML += `
-	<div class="bg-light px-5  rounded-3">
-	<div class="fs-3 text-center"><i class="${divs[i].family} ${divs[i].prefix}${divs[i].name}"></i></div>
-	<div class="text-uppercase text-center">${divs[i].name}</div>
-	`
-}
-
+const selezione = document.getElementById('tipo-font');
+creazioneDiv();
 for (let i = 0; i < divs.length; i++){
-	const classe = document.getElementsByClassName('fas');
+	const classe = document.getElementsByClassName('bg-light');
 	if (divs[i].color == 'blue') {
 		classe[i].classList.add('color-blue')
 	} else if (divs[i].color == 'orange'){
@@ -135,13 +129,32 @@ for (let i = 0; i < divs.length; i++){
 	}	
 }
 
-const selezione = document.getElementById('tipo-font');
-
 selezione.addEventListener('change', function(){
-	console.log(selezione.value);
-	if (selezione.value == 'all'){
-	}
+	const orange = document.getElementsByClassName('color-orange');
+	const green = document.getElementsByClassName('color-green');
+	const blue = document.getElementsByClassName('color-blue');
+
+	console.log(green[1] + 'questo e una prova');
+	// for (let i = 0; i < divs.length ; i++){
+	// 	if (selezione.value == 'orange') {
+	// 		green[i].classList.add('display-none');
+	// 		blue[i].classList.add('display-none');
+	// 	}
+	// }
+	
 });
+
+
+// for (let i = 0; i < divs.length; i++) {
+// 	container.innerHTML += `
+// 	<div class="bg-light px-5  rounded-3">
+// 	<div class="fs-3 text-center"><i class="${divs[i].family} ${divs[i].prefix}${divs[i].name}"></i></div>
+// 	<div class="text-uppercase text-center">${divs[i].name}</div>
+// 	`
+// }
+
+
+
 
 
 
@@ -166,9 +179,9 @@ divs.forEach( div => {
 function creazioneDiv () {
 	for (let i = 0; i < divs.length; i++) {
 		container.innerHTML += `
-		<div class="bg-light px-5  rounded-3">
+		<div class="bg-light px-5  rounded-3 ">
 		<div class="fs-3 text-center"><i class="${divs[i].family} ${divs[i].prefix}${divs[i].name}"></i></div>
-		<div class="text-uppercase text-center">${divs[i].name}</div>
+		<div class="text-uppercase text-dark text-center">${divs[i].name}</div>
 		`
 	}
 }
